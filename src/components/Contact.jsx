@@ -58,7 +58,7 @@ export default function Contact() {
           </h2>
 
           <p className="mt-2 text-gray-600 text-center md:text-left text-sm sm:text-base">
-            Apply for JEE / Olympiad classes (Class 9 – 11)
+            Apply for JEE / Olympiad classes (Class 8 – 12)
           </p>
 
           {submitted && (
@@ -98,9 +98,10 @@ export default function Contact() {
                 name="class"
                 className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400"
               >
-                <option>Class 9</option>
+                <option>Class 8</option>
                 <option>Class 10</option>
                 <option>Class 11</option>
+                 <option>Class 12</option>
               </select>
 
               <select

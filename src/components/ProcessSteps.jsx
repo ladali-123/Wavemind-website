@@ -24,7 +24,7 @@ const ProcessSteps = () => {
               <ul className="space-y-1 sm:space-y-2 text-gray-800 font-medium text-sm sm:text-base">
                 <li>➤ IIT JEE (Main)</li>
                 <li>➤ IIT JEE (Advanced)</li>
-                <li>➤ Foundation (Class 6–10)</li>
+                <li>➤ Foundation (Class 8–10)</li>
               </ul>
               <button className="mt-4 sm:mt-6 bg-blue-500 hover:bg-blue-600 text-white 
               px-5 sm:px-6 py-2 rounded-full text-sm sm:text-base font-semibold">
