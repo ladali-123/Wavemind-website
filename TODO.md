@@ -1,0 +1,2 @@
+- [x] Create tailwind.config.js with keyframes and animations
+- [x] Edit vite.config.js to remove theme config
