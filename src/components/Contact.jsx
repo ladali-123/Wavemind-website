@@ -58,7 +58,7 @@ export default function Contact() {
           </h2>
 
           <p className="mt-2 text-gray-600 text-center md:text-left text-sm sm:text-base">
-            Apply for JEE / Olympiad classes (Class 8 – 12)
+            Apply for JEE / Olympiad classes (Class 9 – 12)
           </p>
 
           {submitted && (

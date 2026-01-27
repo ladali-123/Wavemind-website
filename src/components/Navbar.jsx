@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import Logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
     { name: "Home", href: "#herosection" },
@@ -11,29 +14,48 @@ export default function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
+  const handleNavClick = (href) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto flex justify-between items-center h-16 md:h-20 px-4 sm:px-6 md:px-16">
 
         {/* Logo */}
-        <a href="#herosection" className="flex items-center h-full">
+        <button onClick={() => handleNavClick("#herosection")} className="flex items-center h-full">
           <img
             src={Logo}
             alt="LearnBee Logo"
             className="h-12 md:h-14 object-contain"
           />
-        </a>
+        </button>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-10">
           {navLinks.map((item) => (
-            <a
+            <button
               key={item.name}
-              href={item.href}
+              onClick={() => handleNavClick(item.href)}
               className="text-dark hover:text-primary font-medium"
             >
               {item.name}
-            </a>
+            </button>
           ))}
         </div>
 
@@ -65,14 +87,16 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           {navLinks.map((item) => (
-            <a
+            <button
               key={item.name}
-              href={item.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                handleNavClick(item.href);
+                setMenuOpen(false);
+              }}
               className="block py-3 px-6 text-dark hover:text-primary font-medium "
             >
               {item.name}
-            </a>
+            </button>
           ))}
         </div>
       )}

@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function HeroSection() {
+  const navigate = useNavigate();
   return (
     <section
       id="herosection"
@@ -34,10 +37,16 @@ export default function HeroSection() {
 
           {/* Course Buttons */}
           <div className="mt-3 sm:mt-3 flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3">
-            <button className="px-5 py-2 sm:px-8 sm:py-3 bg-gradient-to-r from-gray-800 to-gray-900 text-white font-bold rounded-xl hover:from-gray-900 hover:to-black transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <button
+              onClick={() => navigate('/olympiad')}
+              className="px-5 py-2 sm:px-8 sm:py-3 bg-gradient-to-r from-gray-800 to-gray-900 text-white font-bold rounded-xl hover:from-gray-900 hover:to-black transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
               Olympiad
             </button>
-            <button className="px-5 py-2 sm:px-8 sm:py-3 bg-gradient-to-r from-gray-800 to-gray-900 text-white font-bold rounded-xl hover:from-gray-900 hover:to-black transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+
+            <button 
+            onClick={() => navigate('/iit')}
+            className="px-5 py-2 sm:px-8 sm:py-3 bg-gradient-to-r from-gray-800 to-gray-900 text-white font-bold rounded-xl hover:from-gray-900 hover:to-black transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
               IIT JEE
             </button>
           </div>

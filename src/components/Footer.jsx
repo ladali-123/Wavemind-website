@@ -104,9 +104,7 @@ export default function Footer() {
             <li className="flex items-center gap-2">
               <Phone size={16} /> +91-7355461435
             </li>
-            <li className="flex items-center gap-2">
-              <Phone size={16} /> (9:00 AM - 10:00 PM)
-            </li>
+          
             <li className="flex items-start gap-2">
               <MapPin size={16} className="mt-1" />
 

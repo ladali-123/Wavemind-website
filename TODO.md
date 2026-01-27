@@ -1,2 +1,4 @@
-- [x] Create tailwind.config.js with keyframes and animations
-- [x] Edit vite.config.js to remove theme config
+- [x] Update Navbar.jsx to use useNavigate and useLocation for proper navigation
+- [x] Replace anchor links with onClick handlers that navigate to home page and scroll to sections
+- [x] Handle scrolling for both cases: when on Olympiad page and when already on home page
+- [ ] Test navigation on both HomePage and OlympiadPage
