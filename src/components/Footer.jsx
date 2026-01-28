@@ -72,9 +72,9 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-white/80">
             <li>Terms and Conditions</li>
             <li>Privacy Policy</li>
-            <li>Contact Us</li>
-            <li>Our Achievers</li>
-            <li>Become our Partner</li>
+
+            <li>Excellence</li>
+            <li>Mentorship </li>
             <li className="mt-2">
               <a
                 href="https://play.google.com/store/apps/details?id=com.wavemind.edu.com&pcampaignid=web_share"
@@ -104,7 +104,7 @@ export default function Footer() {
             <li className="flex items-center gap-2">
               <Phone size={16} /> +91-7355461435
             </li>
-          
+
             <li className="flex items-start gap-2">
               <MapPin size={16} className="mt-1" />
 

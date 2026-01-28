@@ -10,21 +10,26 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-12 items-center">
 
         <div className="text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold 
-         leading-snug md:leading-[1.15]
-           bg-gradient-to-r from-gray-900 via-blue-800 to-blue-900 
-              bg-clip-text text-transparent">
+    <h1
+  className="
+    text-3xl sm:text-4xl md:text-6xl 
+    font-bold
+    leading-tight sm:leading-snug md:leading-[1.1]
+    bg-gradient-to-r from-gray-900 via-blue-800 to-blue-900 
+    bg-clip-text text-transparent
+  "
+>
+  India's Best Elite{" "}
+  <span className="block sm:inline">
+    Physics Mentorship
+  </span>{" "}
+  <span className="block text-blue-600 md:text-4xl text-2xl md:mt-4">
+    for JEE, NSEP & Olympiads.
+  </span>
+</h1>
 
-            India's Best Elite Physics Mentorship{" "}
-            <span className="relative inline-block">
-              <span className="relative inline-block align-baseline">
-                <span className="text-blue-600 md:text-4xl text-2xl">
-                  for JEE, NSEP & Olympiads.
-                </span>
-              </span>
 
-            </span>
-          </h1>
+
 
           <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-700 leading-relaxed max-w-full sm:max-w-2xl mx-auto md:mx-0">
             Master new skills with our engaging courses, interactive lessons, and
