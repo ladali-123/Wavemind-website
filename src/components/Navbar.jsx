@@ -12,23 +12,28 @@ export default function Navbar() {
     { name: "Home", href: "#herosection" },
     { name: "Courses", href: "#processsteps" },
     { name: "Contact", href: "#contact" },
+    { name: "Blog", href: "/blog" },
   ];
 
   const handleNavClick = (href) => {
-    if (location.pathname !== "/") {
-      navigate("/");
-      // Wait for navigation to complete, then scroll
-      setTimeout(() => {
+    if (href.startsWith("/")) {
+      navigate(href);
+    } else {
+      if (location.pathname !== "/") {
+        navigate("/");
+        // Wait for navigation to complete, then scroll
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        // Already on home page, just scroll
         const element = document.querySelector(href);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100);
-    } else {
-      // Already on home page, just scroll
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   };

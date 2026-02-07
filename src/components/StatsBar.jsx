@@ -17,6 +17,8 @@ const steps = [
     dot: "bg-sky-400",
     icon: <Monitor size={18} />,
     side: "right",
+
+    
   },
   {
     step: "STEP 2",

@@ -23,8 +23,8 @@ export default function HeroSection() {
   <span className="block sm:inline">
     Physics Mentorship
   </span>{" "}
-  <span className="block text-blue-600 md:text-4xl text-2xl md:mt-4">
-    for JEE, NSEP & Olympiads.
+  <span className="block text-blue-600 md:text-4xl text-2xl md:mt-4 ">
+    for IIT JEE, NSEP & Olympiads.
   </span>
 </h1>
 
@@ -83,12 +83,12 @@ export default function HeroSection() {
         {/* Image Section */}
         <div className="relative mt-4 md:mt-0">
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+            src="https://i.pinimg.com/736x/81/0d/23/810d2349c2595b63ecfd644a62ed1e90.jpg"
             alt="Students learning"
             className="rounded-xl shadow-2xl w-full"
           />
 
-          <div className="absolute -bottom-4 -left-4 bg-white p-3 sm:p-6 rounded-xl shadow-lg hidden md:block">
+          <div className="absolute -bottom-4 -left-4 bg-white p-2 sm:p-6 rounded-xl shadow-lg hidden md:block">
             <p className="font-bold text-sm sm:text-base">Interactive Lessons</p>
             <p className="text-xs sm:text-sm mt-1">Engaging content that makes learning fun</p>
           </div>

@@ -1,4 +1,5 @@
-- [x] Update Navbar.jsx to use useNavigate and useLocation for proper navigation
-- [x] Replace anchor links with onClick handlers that navigate to home page and scroll to sections
-- [x] Handle scrolling for both cases: when on Olympiad page and when already on home page
-- [ ] Test navigation on both HomePage and OlympiadPage
+# TODO for Moving NSEP & INPhO Card to Olympiad Component
+
+- [x] Remove NSEP & INPhO Olympiad Preparation card from IIT.jsx
+- [x] Add NSEP & INPhO Olympiad Preparation card to Olympiad.jsx alongside the Coming Soon card
+- [x] Update the grid layout in Olympiad.jsx to accommodate two cards

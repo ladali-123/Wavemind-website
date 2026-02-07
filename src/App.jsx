@@ -15,6 +15,9 @@ import FloatingButtons from './components/FloatingButtons';
 import Faq from './components/Faqwave';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import Blog from './Blog/blog';
+import NSEPBlog from './blogpages/Nsep Physics';
+import WhystuBlog from './blogpages/Whystu';
 
 function HomePage() {
   return (
@@ -80,12 +83,19 @@ function IITJEEPage() {
   );
 }
 
+function BlogPage() {
+  return <Blog />;
+}
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/olympiad" element={<OlympiadPage />} />
       <Route path="/iit" element={<IITJEEPage />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="/nsep-physics" element={<NSEPBlog />} />
+      <Route path="/why-students" element={<WhystuBlog />} />
     </Routes>
   );
 }
