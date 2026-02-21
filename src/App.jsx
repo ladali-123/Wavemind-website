@@ -18,6 +18,7 @@ import Contact from './components/Contact';
 import Blog from './Blog/blog';
 import NSEPBlog from './blogpages/Nsep Physics';
 import WhystuBlog from './blogpages/Whystu';
+import WhyfailBlog from './blogpages/Whyfail';
 
 function HomePage() {
   return (
@@ -87,6 +88,21 @@ function BlogPage() {
   return <Blog />;
 }
 
+function ContactPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <Navbar />
+
+      {/* Contact Section */}
+      <Contact />
+
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
+}
+
 function App() {
   return (
     <Routes>
@@ -95,7 +111,9 @@ function App() {
       <Route path="/iit" element={<IITJEEPage />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/nsep-physics" element={<NSEPBlog />} />
-      <Route path="/why-students" element={<WhystuBlog />} />
+<Route path="/why-students" element={<WhystuBlog />} />
+      <Route path="/why-most-students-fail-in-physics-olympiad" element={<WhyfailBlog />} />
+      <Route path="/contact" element={<ContactPage />} />
     </Routes>
   );
 }
