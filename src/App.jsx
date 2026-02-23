@@ -19,6 +19,7 @@ import Blog from './Blog/blog';
 import NSEPBlog from './blogpages/Nsep Physics';
 import WhystuBlog from './blogpages/Whystu';
 import WhyfailBlog from './blogpages/Whyfail';
+import Results from './components/Results';
 
 function HomePage() {
   return (
@@ -47,8 +48,9 @@ function HomePage() {
       {/* Floating Action Buttons */}
       <FloatingButtons />
        <Waveapp/>
+      <Results/>
         <Faq/>
-      {/* Footer */}
+      {/* Foo ter */}
       <Footer />
     </div>
   );
@@ -103,15 +105,31 @@ function ContactPage() {
   );
 }
 
+function CoursesPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <Navbar />
+
+      {/* Courses Section */}
+      <CoursesSection />
+
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
+}
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/courses" element={<CoursesPage />} />
       <Route path="/olympiad" element={<OlympiadPage />} />
       <Route path="/iit" element={<IITJEEPage />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/nsep-physics" element={<NSEPBlog />} />
-<Route path="/why-students" element={<WhystuBlog />} />
+      <Route path="/why-students" element={<WhystuBlog />} />
       <Route path="/why-most-students-fail-in-physics-olympiad" element={<WhyfailBlog />} />
       <Route path="/contact" element={<ContactPage />} />
     </Routes>

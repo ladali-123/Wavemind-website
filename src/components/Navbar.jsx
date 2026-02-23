@@ -9,33 +9,14 @@ export default function Navbar() {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Home", href: "#herosection" },
-    { name: "Courses", href: "#processsteps" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Courses", href: "/courses" },
+    { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blog" },
   ];
 
   const handleNavClick = (href) => {
-    if (href.startsWith("/")) {
-      navigate(href);
-    } else {
-      if (location.pathname !== "/") {
-        navigate("/");
-        // Wait for navigation to complete, then scroll
-        setTimeout(() => {
-          const element = document.querySelector(href);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
-      } else {
-        // Already on home page, just scroll
-        const element = document.querySelector(href);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    }
+    navigate(href);
   };
 
   return (
@@ -43,7 +24,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center h-16 md:h-20 px-4 sm:px-6 md:px-16">
 
         {/* Logo */}
-        <button onClick={() => handleNavClick("#herosection")} className="flex items-center h-full">
+        <button onClick={() => handleNavClick("/")} className="flex items-center h-full">
           <img
             src={Logo}
             alt="LearnBee Logo"
@@ -57,7 +38,11 @@ export default function Navbar() {
             <button
               key={item.name}
               onClick={() => handleNavClick(item.href)}
-              className="text-dark hover:text-primary font-medium"
+              className={`text-lg font-medium ${
+                location.pathname === item.href 
+                  ? 'text-blue-800' 
+                  : 'text-dark hover:text-blue-800'
+              }`}
             >
               {item.name}
             </button>
@@ -67,12 +52,12 @@ export default function Navbar() {
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center space-x-4">
           <a
-            href="#processsteps"
+            href="/courses"
             className="px-4 py-2 text-primary font-medium hover:text-primaryDark"
           ></a>
 
           <a
-            href="#contact"
+            href="/contact"
             className="px-6 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primaryDark transition"
           ></a>
         </div>
@@ -98,7 +83,11 @@ export default function Navbar() {
                 handleNavClick(item.href);
                 setMenuOpen(false);
               }}
-              className="block py-3 px-6 text-dark hover:text-primary font-medium "
+              className={`block py-3 px-6 text-lg font-medium ${
+                location.pathname === item.href 
+                  ? 'text-blue-800' 
+                  : 'text-dark hover:text-blue-800'
+              }`}
             >
               {item.name}
             </button>
