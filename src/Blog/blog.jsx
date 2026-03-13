@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import olympiadb from '../assets/olympiadb.png';
 import blogpic2 from '../assets/blogpic2.png';
 import blogpic3 from '../assets/blogpic3.png';
+import preparation from '../assets/preparation.png';
 import { useNavigate } from 'react-router-dom';
 
 const Blog = () => {
@@ -38,6 +39,16 @@ const Blog = () => {
       author: 'WaveMind Edu',
       image: blogpic3,
       sku: 'EDU103'
+    },
+    {
+      id: 4,
+      title: 'Best Books for Physics Olympiad Preparation (Complete Guide for Students)',
+      excerpt: 'Discover the best books for Physics Olympiad preparation including H.C. Verma, Irodov, and Halliday Resnick.',
+      content: 'Full content about Physics Olympiad preparation books goes here.',
+      date: 'March 13, 2026',
+      author: 'WaveMind Edu',
+      image: preparation,
+      sku: 'EDU104'
     }
   ];
 
@@ -59,31 +70,31 @@ const Blog = () => {
       <div className="max-w-6xl mx-auto px-4 -mt-16 mb-24">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden grid md:grid-cols-2">
           <img
-            src={blogs[2].image}
-            alt={blogs[2].title}
+            src={blogs[3].image}
+            alt={blogs[3].title}
             className="w-full h-full object-cover"
           />
 
           <div className="p-10 flex flex-col justify-center">
             <span className="inline-block w-fit px-4 py-1 mb-4 text-xs font-semibold text-blue-600 bg-blue-100
              rounded-full">
-              FEATURED • {blogs[2].sku}
+              FEATURED • {blogs[3].sku}
             </span>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              {blogs[2].title}
+              {blogs[3].title}
             </h2>
 
             <p className="text-gray-600 mb-6">
-              {blogs[2].excerpt}
+              {blogs[3].excerpt}
             </p>
 
             <p className="text-sm text-gray-500 mb-6">
-              By {blogs[2].author} • {blogs[2].date}
+              By {blogs[3].author} • {blogs[3].date}
             </p>
 
             <button
-              onClick={() => navigate('/why-most-students-fail-in-physics-olympiad')}
+              onClick={() => navigate('/prep')}
               className="w-fit px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
             >
               Read Full Article →
@@ -127,7 +138,13 @@ const Blog = () => {
                 </div>
 
                 <button
-                  onClick={() => blog.id === 1 ? navigate('/nsep-physics') : blog.id === 2 ? navigate('/why-students') : blog.id === 3 ? navigate('/why-most-students-fail-in-physics-olympiad') : null}
+                  onClick={() => {
+                    if (blog.id === 1) navigate('/nsep-physics');
+                    else if (blog.id === 2) navigate('/why-students');
+                    else if (blog.id === 3) navigate('/why-most-students-fail-in-physics-olympiad');
+                    else if (blog.id === 4) navigate('/prep');
+
+                  }}
                   className="w-full py-2 font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition"
                 >
                   Read More
@@ -144,3 +161,4 @@ const Blog = () => {
 };
 
 export default Blog;
+

@@ -19,6 +19,7 @@ import Blog from './Blog/blog';
 import NSEPBlog from './blogpages/Nsep Physics';
 import WhystuBlog from './blogpages/Whystu';
 import WhyfailBlog from './blogpages/Whyfail';
+import PrepBlog from './blogpages/Prep';
 import Results from './components/Results';
 
 function HomePage() {
@@ -131,6 +132,7 @@ function App() {
       <Route path="/nsep-physics" element={<NSEPBlog />} />
       <Route path="/why-students" element={<WhystuBlog />} />
       <Route path="/why-most-students-fail-in-physics-olympiad" element={<WhyfailBlog />} />
+      <Route path="/prep" element={<PrepBlog />} />
       <Route path="/contact" element={<ContactPage />} />
     </Routes>
   );

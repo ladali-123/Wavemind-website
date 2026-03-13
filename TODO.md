@@ -1,5 +1,8 @@
-# TODO for Moving NSEP & INPhO Card to Olympiad Component
+# Active Task: Add official books link under "Best Books for Physics Olympiad Preparation" h2 in Prep.jsx
 
-- [x] Remove NSEP & INPhO Olympiad Preparation card from IIT.jsx
-- [x] Add NSEP & INPhO Olympiad Preparation card to Olympiad.jsx alongside the Coming Soon card
-- [x] Update the grid layout in Olympiad.jsx to accommodate two cards
+Previous task completed.
+
+## Steps:
+- [ ] 1. Edit project1/src/blogpages/Prep.jsx to insert paragraph with link https://olympiads.hbcse.tifr.res.in/how-to-prepare/olympiad-books/ after the h2.
+- [ ] 2. Verify in browser.
+- [ ] 3. Mark complete.
