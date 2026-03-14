@@ -94,7 +94,7 @@ const Blog = () => {
             </p>
 
             <button
-              onClick={() => navigate('/prep')}
+onClick={() => navigate('/best-books-for-physics-olympiad-preparation')}
               className="w-fit px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
             >
               Read Full Article →
@@ -142,7 +142,7 @@ const Blog = () => {
                     if (blog.id === 1) navigate('/nsep-physics');
                     else if (blog.id === 2) navigate('/why-students');
                     else if (blog.id === 3) navigate('/why-most-students-fail-in-physics-olympiad');
-                    else if (blog.id === 4) navigate('/prep');
+else if (blog.id === 4) navigate('/best-books-for-physics-olympiad-preparation');
 
                   }}
                   className="w-full py-2 font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition"

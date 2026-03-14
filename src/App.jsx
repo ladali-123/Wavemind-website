@@ -31,7 +31,7 @@ function HomePage() {
       {/* Main Hero Section */}
       <HeroSection />
 
-      <Contact/>
+      <Contact />
       {/* Stats Bar */}
       <StatsBar />
 
@@ -48,9 +48,9 @@ function HomePage() {
 
       {/* Floating Action Buttons */}
       <FloatingButtons />
-       <Waveapp/>
-      <Results/>
-        <Faq/>
+      <Waveapp />
+      <Results />
+      <Faq />
       {/* Foo ter */}
       <Footer />
     </div>
@@ -132,7 +132,7 @@ function App() {
       <Route path="/nsep-physics" element={<NSEPBlog />} />
       <Route path="/why-students" element={<WhystuBlog />} />
       <Route path="/why-most-students-fail-in-physics-olympiad" element={<WhyfailBlog />} />
-      <Route path="/prep" element={<PrepBlog />} />
+      <Route path="/best-books-for-physics-olympiad-preparation"element={<PrepBlog />}/>
       <Route path="/contact" element={<ContactPage />} />
     </Routes>
   );
